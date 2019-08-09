@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3DTV at Home: Eulerian-Lagrangian Stereo-to-Multiview Conversion</title>
+
+		<link rel="stylesheet" type="text/css" media="screen" href="my.css"/>
+	</head>
+
+<body>
+
+<div id="content">
+	<h1 id="sg2017">
+		3DTV at Home: Eulerian-Lagrangian Stereo-to-Multiview Conversion,
+		<a href="http://s2017.siggraph.org/">SIGGRAPH 2017</a>
+	</h1>
+	<div class="header">
+		<br/>
+		<b>3DTV at Home: Eulerian-Lagrangian Stereo-to-Multiview Conversion</b>
+		<br/>
+		<br/>
+		<a href="https://people.csail.mit.edu/pkellnho/">Petr Kellnhofer</a><sup>1,2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://people.mpi-inf.mpg.de/~pdidyk/">Piotr Didyk</a><sup>2,3</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://cfg.mit.edu/content/szu-po-wang">Szu-Po Wang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://people.csail.mit.edu/pitchaya/">Pitchaya Sitthi-Amorn</a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="https://billf.mit.edu//">William Freeman</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://people.csail.mit.edu/fredo/">Fredo Durand</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="http://people.csail.mit.edu/wojciech/">Wojciech Matusik</a><sup>1</sup>
+		<br/>
+		<br/>
+		<sup>1</sup> MIT CSAIL&nbsp;&nbsp;&nbsp;&nbsp;
+		<sup>2</sup> MPI Informatik&nbsp;&nbsp;&nbsp;&nbsp;
+		<sup>3</sup> Saarland University, MMCI&nbsp;&nbsp;&nbsp;&nbsp;
+		<sup>4</sup> Chulangkorn University
+		
+		<div class="teaser">
+			<img src="teaser.jpg"/><br />
+			<p class="label">
+				Stereoscopic views of multiview content generated from stereoscopic content using our method and two previous approaches. 
+				Monocular insets highlight limitations of the Lagrangian approach when dealing with fuzzy depth edges and ringing artifacts caused by exhaustive input disparities in the case of the Eulerian approach. 
+				Our method successfully avoids such problems and produces outputs visually closest to the original input.
+				<span class="copyright">"Scene copyright: Blender Foundation (https://orange.blender.org/)</span>
+			</p>
+		</div>
+	</div>
+	
+
+
+		</center>
+	<h2>Abstract</h2>
+	<p style = "padding:10.0px 20.0px 10.0px 20.0px;text-align:justify">
+	Stereoscopic 3D (S3D) movies have become widely popular in the movie theaters, but the adoption of S3D at home is low even though most TV sets support S3D.
+	It is widely believed that S3D with glasses is not the right approach for the home. A much more appealing approach is to use automultiscopic displays that provide a glasses-free 3D experience to multiple viewers. 
+	A technical challenge is the lack of native multiview content that is required to deliver a proper view of the scene for every viewpoint.
+	Our approach takes advantage of the abundance of stereoscopic 3D movies. We propose a real-time system that can convert stereoscopic video to a high-quality, multiview video that can be directly fed to automultiscopic displays. Our algorithm uses a wavelet-based decomposition of stereoscopic images with per-wavelet disparity estimation. A key to our solution lies in combining Lagrangian and Eulerian approaches for both the disparity estimation and novel view synthesis, which leverages the complementary advantages of both techniques.
+	The solution preserves all the features of Eulerian methods, e.g. subpixel accuracy, high performance, robustness to ambiguous depth cases, and easy integration of inter-view aliasing while maintaining the advantages of Lagrangian approaches, e.g. robustness to large disparities and possibility of performing non-trivial disparity manipulations through both view extrapolation and interpolation. The method achieves real-time performance on current GPUs. Its design also enables an easy hardware implementation that is demonstrated using a field-programmable gate array. We analyze the visual quality and robustness of our technique on a number of synthetic and real-world examples. We also perform a user experiment which demonstrates benefits of the technique when compared to existing solutions.
+	</p>
+
+	<h2>Video</h2>
+	<p style="text-align:center;">
+	<iframe width="640" height="360" src="https://www.youtube.com/embed/pzmxGWf8z38?rel=0" frameborder="0" allowfullscreen></iframe>
+	<br />
+	See also <a href="https://youtu.be/i_2RrenQ2F4">Stereo bonus (side-by-side)</a>
+	</p>
+
+	<h2>Downloads</h2>
+	<table>
+		<tr valign ="top">
+			<td>
+
+				<table class="downloads" style="width: 800px;padding: 20px 0px 0px 15px">
+					<tr>
+						<td><div style="width: 23px; height: 24px; background-image:url(PDF.png);"/></td>
+						<td>Paper: <a href="http://dl.acm.org/citation.cfm?doid=3072959.3073617">ACM Digital Library</a></td>
+					</tr>							
+					<tr style="width: 23px;">
+						<td><div style="width: 26px; height: 30px; background-image:url(avi.png);"/></td>
+						<td><a href="video.mp4">Main submission video</a> (110 MiB) and <a href="bonus-stereo.mp4">stereoscopic bonus</a> (37.3 MiB) (side-by-side Left-Right encoding)</td>
+					</tr>
+					<!--<tr style="">
+						<td><div style="width: 23px; height: 24px; background-image:url(pp-icon.png); background-repeat: no-repeat;"/></td>
+						<td><a href="#">SIGGRAPH 2017 presentation slides</a> [coming soon]</td>
+					</tr>-->
+				</table>
+			</td>
+			<td style="width:600px;">
+
+			</td>
+		</tr>
+	</table>
+	<br/>
+
+
+	<h2>Citation</h2>
+	<p style = "padding:10.0px 20.0px 10.0px 20.0px;">
+		<i>Petr Kellnhofer, Piotr Didyk, Szu-Po Wang, Pitchaya Sitthi-Amorn, William Freeman, Fredo Durand, Wojciech Matusik</i><br/>
+		<b>3DTV at Home: Eulerian-Lagrangian Stereo-to-Multiview Conversion</b><br/>
+		ACM Transactions on Graphics 36(4) (Proc. SIGGRAPH 2017, Los Angeles, California, USA)<br/>	
+		<div style = "padding: 0.0px 0.0px 0.0px 20.0px;">
+	<pre><code>@article{Kellnhofer2017,
+	  author = { 
+		Petr Kellnhofer and
+		Piotr Didyk and 
+		Szu-Po Wang and 
+		Pitchaya Sitthi-Amorn and 
+		William Freeman and 
+		Fredo Durand and
+		Wojciech Matusik},
+	  title = {{3DTV} at Home: Eulerian-Lagrangian Stereo-to-Multiview Conversion},
+	  journal = {ACM Transactions on Graphics (Proc. SIGGRAPH)},
+	  year = {2017},
+	  volume = {36},
+	  number = {4},
+	  doi = {10.1145/3072959.3073617},
+	  url = {http://dx.doi.org/10.1145/3072959.3073617}
+	}</code></pre></div>
+	</p>
+	<p style = "padding:0.0px 20.0px 10.0px 20.0px;">
+		<span style="font-size: 7pt;">&copy; 2017 The Authors. This is the author's version of the work. It is posted here for your personal use. Not for redistribution. <br />The definitive version was published in <i>ACM Transactions on Graphics 36(4)</i> (Proc. SIGGRAPH 2017). http://dx.doi.org/10.1145/3072959.3073617</span>
+	</p>
+
+
+
+
+	<div class="logos">
+		<a href="https://www.csail.mit.edu/"><img src="./logos/csail.jpg" alt="MIT CSAIL" /></a>
+		<a href="http://www.mpi-inf.mpg.de/"><img src="./logos/Logo_MPII.png" alt="MPI Informatik" /></a>
+		<a href="http://www.mmci.uni-saarland.de/en/start"><img src="./logos/m2ci_logo_rz_rgb.jpg" alt="Saarland University, MMCI" /></a>
+		<a href="http://www.chula.ac.th/en/"><img src="./logos/logo_cu.png" alt="Chulalongkorn University" /></a>
+		<span class="clr"></span>
+	</div>
+	<br />
+	<br />
+		
+		
+		
+	   </div>
+	</div>
+
+</div>
+
+</body>
+</html>

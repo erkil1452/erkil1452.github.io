@@ -1,0 +1,87 @@
+/* this is the new corporate style of the mpii */
+
+html, body {
+	margin:0;
+	padding:0;
+	color:#036;
+/* 	color:rgb(54%,64%,70%); */
+	background:#fff;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	font-size: 90%;
+}
+
+#content {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+h1, h2 {
+	color:#fff;
+	background: rgb(78, 192, 212);
+	padding:0.25em 1em 0.5em 1em; 
+	margin:0;
+	font-size: 150%;
+}
+
+h1 a, h1 a:visited {
+	color: #cefcff;
+}
+
+
+
+
+a:link {color:#036;}
+
+a:visited {
+	color:#677da9;
+}
+
+a:hover {
+	color:#3dd4ce;
+}
+
+
+
+
+.header {
+	text-align: center;
+}	
+
+.teaser {
+	margin: 20px auto;
+	text-align: center;
+}
+.teaser img {
+	float: none !important;
+	margin: 0px !important;
+}
+
+.teaser .label {
+	padding: 5px 25px !important;
+	margin: 0px;
+	font-style: italic;
+}
+.teaser .label em {
+	font-style: normal;
+}
+
+
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover{color: red;}
+a { font-weight: bold; }
+
+.logos { margin: 0 auto; }
+.logos a { display: block; float: left; clear: none; margin: 0px 40px; }
+.logos a img { height: 60px; }
+
+.clr {
+	clear: both;
+	margin-top: -1px;
+	position: relative;
+	height: 0;
+	border: none;
+	overflow: hidden;
+	visibility: hidden;
+	display: block;
+}
